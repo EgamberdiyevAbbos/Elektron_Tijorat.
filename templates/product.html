@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Product</h1>
+{% for p in product %}
+        <div class="col-sm-6 col-md-3 col-lg-4 p-b-35 isotope-item women">
+          <!-- Block2 -->
+          <div class="block2">
+            <div class="block2-pic hov-img0">
+              <a href="{{p.get_url}}">
+                <img style="with: 20% !important;" src="{{ p.image.url }}" alt="{{p.name}}">
+              </a>
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+              <div class="block2-txt-child1 flex-col-l ">
+                <h1 class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                  {{p.name}}
+                </h1>
+
+                <span class="stext-105 cl3">
+                  ${{p.price}}
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+{% endblock content %}

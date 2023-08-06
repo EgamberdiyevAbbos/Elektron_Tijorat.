@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div>
+    <form method="GET" action="/search" class="search-form">
+        <input type="search" name="q" placeholder="search product.." id="search-box">
+        <label  for="search-box" class="fas fa-search"></label>
+    </form>
+</div>
+
+<a href="{% url 'category' %}"> Category </a>
+
+
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+<body>
+
+
+
+
+{% block content %}
+{% if q %}
+ <h1 class="product-text">"{{q}}" Siz Qidirgan Malumot </h1>
+{% else %}
+  <h1 class="product-text"> Yoq </h1>
+{% endif %}
+  <h2>{{ category.name }}</h2>
+    <ul>
+        {% for pro in product %}
+               <li><a>{{ pro.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+{% endblock content %}
